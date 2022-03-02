@@ -75,8 +75,20 @@
             imc = (peso / (altura * altura));
             return imc;
         }
-        
+
         imprimir(calculaimc(76,1));
+
+        ln();pular2ln();
+        var nome = prompt("Digite seu nome");
+        var pesouser = prompt(nome + "digite seu peso");
+        var alturauser = prompt(nome + " digite sua altura");
+
+        var imcuser = calculaimc(pesouser,alturauser)
+        imprimir("Seu IMC é: " + imcuser);
+
+
+
+
     </script>
 
         
