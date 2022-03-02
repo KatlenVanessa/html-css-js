@@ -1,0 +1,25 @@
+<html>
+
+<meta charset="UTF-8">
+    <head>
+        <title>calcula-consumo</title>
+    </head>
+
+    <body>
+        <h3>Cálculo do IMC</h3>
+        <script>
+
+            var imc = function(peso,altura){
+            /*Declarar apenas as variaveis pro calculo*/
+            var imc;
+            imc = (peso/(altura*altura));
+            document.write("O IMC é: ", imc.toFixed(2));
+            }
+
+            var p = 84; a = 1.9;
+
+            imc(p,a);
+            
+        </script>
+    </body>
+</html>
