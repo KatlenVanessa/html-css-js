@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>calcula-consumo</title>
+    </head>
+
+    <body>
+        <h3>Álcool ou Gasolina?</h3>
+        <script>
+            var caminhocomgasolina = 480;
+            var tanque = 40;
+            var consumodegasolina = caminhocomgasolina/tanque;
+
+            document.write("<br> O consumo foi de ", consumodegasolina.toFixed(2), " litros de gasolina");
+
+            var caminhocomalcool = 300;
+            var consumodealcool = caminhocomalcool/tanque;
+
+            document.write("<br> O consumo foi de ", consumodealcool.toFixed(2), " litros de alcool");
+
+            var precogasolina = 2.9;
+            var precoalcool = 2.4;
+
+            var pgk;
+            var pak;
+
+            document.write("<br>Preço da gasolina por quilômetro: ",(precogasolina / consumodegasolina).toFixed(2));
+
+            document.write("<br>Preço do álcool por quilômetro: ",(precoalcool / consumodealcool).toFixed(2));
+
+            
+        </script>
+    </body>
+</html>
