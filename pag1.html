@@ -48,13 +48,13 @@
 
         let meunome = ["Katlen"];
 
-        var  printnome = function(nome){
-        document.write(nome);
+        var  imprimir = function(frase){
+        document.write(frase);
         pularln();
         }
 
-        printnome(meunome);
-        printnome("Katlen");
+        imprimir(meunome);
+        imprimir("Katlen");
 
         var pular2ln = function(){
             document.write("<br><hr><br>");
@@ -70,11 +70,13 @@
         /*Console.log mostra mensagens no console do navegador*/
         console.log("Mensagem visivel no console");
 
-        var imc = function(peso,altura){
-            var imc = (peso/(altura*altura));
+        var calculaimc = function(peso,altura){
+            var imc;
+            imc = (peso / (altura * altura));
             return imc;
-            }
-
+        }
+        
+        imprimir(calculaimc(76,1));
     </script>
 
         
