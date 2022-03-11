@@ -1,0 +1,34 @@
+<html>
+
+<body>
+
+    <script>
+
+    var linha1, linha2, coluna1, coluna2;
+    for(linha1 = 0; linha1 < 5; linha1++){
+        
+        for(coluna1 = 0; coluna1 <= linha1; coluna1++){
+            document.write("_"); 
+           
+        }
+        document.write("*");
+
+        for(linha2 = coluna1; linha2 < (10 - coluna1); linha2++){
+            document.write("_");
+            
+        }
+        document.write("*");
+
+        for(coluna2 = 10; coluna2 >= linha2; coluna2--){
+            document.write("_");
+            
+        }
+        
+        document.write("<br>");
+
+
+
+    }
+    </script>
+</body>
+</html>
