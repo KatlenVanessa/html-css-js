@@ -1,0 +1,50 @@
+<html>
+    <meta charset = "UTF-8">
+<body>
+
+    <script>
+
+        /*var numero = Math.random() * 100;
+        var numeropronto = Math.round(numero);*/
+
+        /*var numeropronto = Math.round(Math.random() * 100);
+
+        var chute = prompt("Tente adivinhar o número que escolhi");
+        if(chute == numeropronto) {
+            document.write(numeropronto + "é mesmo o número que eu escolhi !");
+        }else{
+            document.write("Errado!");
+        }*/
+
+        /*function sorteia(n){
+            if (n >= 0 && <= n){
+                return n;
+            } 
+       }*/
+
+        
+
+        var numeropronto = Math.round(Math.random() * 10);
+
+        for(i = 0; i < 3 ; i++){
+
+            var chute = prompt("Tente adivinhar o número que escolhi em apenas 3 tentativas");
+
+            if(chute == numeropronto) {
+                alert(numeropronto + " é mesmo o número que eu escolhi !"); break;
+            }
+            else if(chute > numeropronto){
+                alert("O seu chute é maior que o número sorteado!");
+                
+            }
+            else{alert("O seu chute é menor que o número sorteado!");}
+
+        }
+
+       
+       
+
+
+    </script>
+</body>
+</html>

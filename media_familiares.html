@@ -1,0 +1,19 @@
+<html>
+    <meta charset="UTF-8">
+<body>
+
+    <script>
+
+    var totalfamiliares = parseInt(prompt("Quantos familiares são?"));
+    var totalidade = 0;
+
+    for(index = 0; index < totalfamiliares; index++){
+        var idade = parseInt(prompt("Digite uma idade:"));
+        var totalidade = totalidade + idade;
+    }
+    var media = totalidade / totalfamiliares;
+    alert("A media das idades é "+ media);
+
+    </script>
+</body>
+</html>
