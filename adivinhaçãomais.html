@@ -1,0 +1,30 @@
+<html>
+    <meta charset = "UTF-8">
+<body>
+
+    <input type = "text" id="numero"/>
+    <input type = "submit" id="adivinhar" value = "Compare com o meu segredo!" />
+
+    <script>
+        var segredo = Math.round(Math.random() * 10);
+
+
+        var caixaDonumero = document.getElementById("numero");
+        
+        var botaoClicado = function(){
+            if(segredo == caixaDonumero.value){
+                alert("Você acertou o meu segredo!");
+            }else{
+                alert("Você errou o meu segredo!");
+            }
+        }
+
+        var botaoAdivinhar = document.getElementById("adivinhar");
+        botaoAdivinhar.onclick = botaoClicado;
+
+
+
+        
+    </script>
+</body>
+</html>
