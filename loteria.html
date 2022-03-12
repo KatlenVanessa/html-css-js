@@ -1,0 +1,36 @@
+<html>
+    <meta charset="UTF-8">
+<body>
+
+<input type="text" id="numero"/>
+<input type="submit" value="Resultado da Loteria" id="resultadoloteria"/>
+    
+
+<script>
+var resultado = [];
+var acertos;
+
+for(cont1 = 0; cont1 < 6; cont1++){
+    resultado[cont1] = Math.round(Math.random() * 10);
+}
+
+var verificaAcerto = function(){
+    numero = document.getElementById("numero").value;
+    for(cont2 = 0; cont2 < 6; cont2++){
+
+            if(resultado[cont2] == numero){
+                alert("Número " + numero +" confere");
+            }
+        }
+    }
+
+var botaoVerificar = document.getElementById("resultadoloteria");
+botaoVerificar.onclick = verificaAcerto;
+
+
+
+</script>
+
+
+</body>
+</html>
