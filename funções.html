@@ -11,14 +11,27 @@
 var tela = document.getElementById("tela");
 var c = tela.getContext("2d");
 
+c.fillStyle="purple";
+
+var funcaoQuadratica = function(x){
+    return 0.01 * x * x;
+}
+
+
+
+var desenhaParabola = function(){
+
 for(var x=0;x<600;x++){
-    var y = 0.01 * x * x;
+    var y = funcaoQuadratica(x);
     console.log("Para x = " + x + ", o y vale " + y);
 
     c.beginPath();
     c.arc(x,400 - y,2,0,2*Math.PI);
     c.fill();
 }
+};
+
+desenhaParabola();
 
 </script>
 
