@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+ 
+</head>
+<body>
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+        /*var desenhaQuadradoVerde = function(x,y){
+            var tela = document.getElementById("tela");
+            var c = tela.getContext("2d");
+    
+            for(x=0;x<600;x=x+50){
+            c.fillStyle="green";
+            c.fillRect(x,y,50,50);
+            c.strokeStyle="black";
+            c.strokeRect(x,y,50,50);}
+        
+        };
+        var desenhaQuadradoVermelho = function(x,y){
+            var tela = document.getElementById("tela");
+            var c = tela.getContext("2d");
+    
+            for(x=0;x<600;x=x+50){
+            c.fillStyle="red";
+            c.fillRect(x,y,50,50);
+            c.strokeStyle="white";
+            c.strokeRect(x,y,50,50);}*/
+    
+var desenhaQuadrado = function (x,y){
+    var tela = document.getElementById("tela");
+    var c = tela.getContext("2d");
+    var x,y;
+    var cor = parseInt(prompt("Escolha uma cor: 2-Vermelho/3-Verde"));
+        switch(cor){
+            case 2:
+            for(x=0;x<600;x=x+50){
+            c.fillStyle="red";
+            c.fillRect(x,y,50,50);
+            c.strokeStyle="white";
+            c.strokeRect(x,y,50,50);
+            }
+            break;
+
+            case 3:
+            for(x=0;x<600;x=x+50){
+            c.fillStyle="green";
+            c.fillRect(x,y,50,50);
+            c.strokeStyle="black";
+            c.strokeRect(x,y,50,50);
+            }
+            break;
+
+        }
+
+};
+
+
+var desenhaCirculoAzul = function(x,y){
+    var tela = document.getElementById("tela");
+    var c = tela.getContext("2d");
+    
+        for(x=x;x<600;x=x+50){
+        c.fillStyle="blue";
+        c.beginPath();
+        c.arc(x,y,25,0,2*3.14);
+        c.fill();}
+};          
+    
+
+desenhaQuadrado(0,0);
+desenhaCirculoAzul(25,75);
+    
+
+
+</script>
+
+</body>
+</html>
