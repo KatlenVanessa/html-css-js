@@ -19,10 +19,10 @@ var funcaoQuadratica = function(x){
 
 
 
-var desenhaParabola = function(){
+var desenhaFuncao = function(funcaoMatematica){
 
 for(var x=0;x<600;x++){
-    var y = funcaoQuadratica(x);
+    var y = funcaoMatematica(x);
     console.log("Para x = " + x + ", o y vale " + y);
 
     c.beginPath();
@@ -31,7 +31,7 @@ for(var x=0;x<600;x++){
 }
 };
 
-desenhaParabola();
+desenhafuncao(funcaoQuadratica);
 
 </script>
 

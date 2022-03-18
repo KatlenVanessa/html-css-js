@@ -1,0 +1,49 @@
+<html>
+<meta charset = "UTF-8">
+
+<body>
+
+<canvas id="tela" width="600" height="400"></canvas>   
+<script>
+var tela = document.getElementById("tela");
+var c = tela.getContext("2d");
+
+var x,y;
+var soma
+
+c.fillStyle="black";
+c.fillRect(0, 0, 580, 380);
+
+c.fillStyle="blue";
+c.fillRect(0, 0, 20, 20);
+c.fillStyle="green";
+c.fillRect(0, 20, 20, 20);
+c.fillStyle="purple";
+c.fillRect(0, 40, 20, 20);
+c.fillStyle="red";
+c.fillRect(0, 60, 20, 20);
+
+
+
+tela.onclick = function(evento){
+    var x = evento.pageX - tela.offsetLeft;
+    var y = evento.pageY - tela.offsetTop;
+    
+    if((x >= 0 && x <= 20) && (y >= 0 && y <= 20)){var cor = "blue";}
+    if((x >= 0 && x <= 20) && (y >= 20 && y <= 40)){var cor = "green";}
+    if((x >= 0 && x <= 20) && (y >= 40 && y <= 60)){var cor = "purple";}
+    if((x >= 0 && x <= 20) && (y >= 60 && y <= 80)){var cor = "red";}
+  
+    c.fillStyle=cor;
+    c.beginPath();
+    c.arc(x,y,10,0,2*3.14);
+    c.fill();
+
+    console.log("Posição do clique: " + x + ", " + y);
+
+};
+
+
+</script>
+</body>
+</html>

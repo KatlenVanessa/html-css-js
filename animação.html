@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+</head>
+
+<body>
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+var tela = document.getElementById("tela");
+var c = tela.getContext("2d");
+
+c.fillStyle="white";
+c.fillRect(0, 0, 600, 400);
+
+
+//FUNCAO CIRCULO
+var circulo = function(x,y,raio){
+    //CIRCULO PREENCHIDO
+    /*c.fillStyle="blue";
+    c.beginPath();
+    c.arc(x,y,raio,0,2*3.14);
+    c.fill();*/
+
+    //CIRCULO NAO PREENCHIDO
+    c.strokeStyle="red";
+    c.beginPath();
+    c.arc(x,y,raio,0,2*3.14);
+    c.stroke();
+    
+
+};
+
+//FUNCAO LIMPA TELA
+    var limpaTela = function(){
+    c.clearRect(0,0,600,400);
+};
+
+var x = 1;
+
+//FUNCAO DESENHA 
+var desenha = function(){
+    //limpaTela();
+    circulo(x,200,x/2);
+    x = x + 1;    
+};
+//CHAMA DESENHA EM INTERVALOS DE 30 MS
+setInterval(desenha, 30);
+
+
+
+
+ 
+
+
+
+</script>
+
+</body>
+</html>

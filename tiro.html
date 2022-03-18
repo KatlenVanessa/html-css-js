@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    
+</head>
+
+<body>
+<canvas id="tela" height="400" width="600"></canvas>
+
+<script>
+
+var tela = document.getElementById("tela");
+var c = tela.getContext("2d");
+
+var cor = function(color){
+    c.fillStyle=color;
+};
+var circulo = function(x, y, raio){
+    cor();
+    c.beginPath();
+    c.arc(x,y,raio,0,3*3.14);
+    c.fill();
+};
+
+
+var desenhaAlvo = function(x, y) {
+    var raio = 40;
+    cor("white");
+    circulo(x, y, raio);
+    cor("red");
+    circulo(x, y, raio-10);
+    cor("white");
+    circulo(x, y, raio-20);
+    cor("red");
+    circulo(x, y, raio-30);
+};
+
+var alvoX;
+var alvoY;
+var limite;
+var raioclick = 20;
+
+var limpa = function(){
+    c.clearRect(0,0,600,400);
+};
+
+var sorteia = function(limite){
+    i = 0;
+    while(i < 5){
+        var numero = Math.round(Math.random() * 1000);
+        if(numero < limite){return numero;}
+        else{i++;}
+    }
+};
+
+var desenha = function(){
+    limpa();
+    alvoX = sorteia(600);
+    alvoY = sorteia(400);
+    desenhaAlvo(alvoX, alvoY);
+};
+
+setInterval(desenha,1000);
+
+tela.onclick = function(evento){
+    var clickX = evento.pageX - tela.offsetLeft;
+    var clickY = evento.pageY - tela.offsetTop;
+    
+    c.fillStyle="yellow";
+    c.beginPath();
+    c.arc(x,y,raioclick,0,2*3.14);
+    c.fill();
+    
+}; 
+
+//usar pitagoras pra ver se o click é menor que o alvo
+
+if () a*a = b*b + c*c;
+
+
+</script>
+</body>
+</html>
